@@ -1,13 +1,14 @@
 {
-  "name": "gulp-app",
+  "name": "gulp-less",
   "version": "1.0.0",
-  "description": "Gulp setup",
+  "description": "Less examples",
+   "private":"true",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "gulp"
+    "less"
   ],
   "author": "Uros Komatar",
   "license": "MIT",
@@ -19,6 +20,8 @@
     "gulp-imagemin": "^3.0.1",
     "gulp-less": "^3.1.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3"
+    "gulp-uglify": "^1.5.3",
+    "jquery": "^3.0.0",
+    "save": "^2.3.0"
   }
 }
