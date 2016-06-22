@@ -1,0 +1,28 @@
+// Operations
+
+@div-width: 200px;
+@div-color: #03A9F4;
+
+.square {
+    float: left;
+    height: 100px;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#div13 {
+    .square();
+    width: @div-width;
+    background-color: @div-color;
+    /*&:hover{
+        background-color: @div-color-20;
+    }*/
+    
+}
+
+#div14 {
+    .square();
+    width: @div-width * 2;
+    background-color: @div-color - 100;
+}

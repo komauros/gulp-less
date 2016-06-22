@@ -19,7 +19,7 @@ var jquery = require('jquery');
 
 // Less Task
 gulp.task('less', function() {
-    return gulp.src('app/less/*.less')
+    return gulp.src('app/less/styles.less') //samo styles, ostale importamo
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -64,9 +64,10 @@ gulp.task('scripts', function() {
 gulp.task('watch', function() {
 
     gulp.watch('app/css/*.less', gulp.series('less'));
-    gulp.watch('app/js/*.js', gulp.series('scripts'));  //ko se zgodi sprememba .js zažene scripts task
-    gulp.watch('app/img/*', gulp.series('images'));
+  //  gulp.watch('app/js/*.js', gulp.series('scripts'));  //ko se zgodi sprememba .js zažene scripts task
+ //   gulp.watch('app/img/*', gulp.series('images'));
 });
 
 //Default Task
-gulp.task('default',gulp.series(['clean','jquery','less','images','scripts','watch']));
+//gulp.task('default',gulp.series(['clean','jquery','less','images','scripts','watch']));
+gulp.task('default',gulp.series(['clean','less','watch']));
